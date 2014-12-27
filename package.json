@@ -1,0 +1,28 @@
+{
+  "name": "WebComponentsSupport",
+  "version": "1.0.0",
+  "description": "a library for detecting current support for the usual features for building web components",
+  "main": "WebComponentsSupport.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sole/WebComponentsSupport"
+  },
+  "keywords": [
+    "web",
+    "components",
+    "feature",
+    "detection"
+  ],
+  "author": "sole",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/sole/WebComponentsSupport/issues"
+  },
+  "homepage": "https://github.com/sole/WebComponentsSupport"
+}
