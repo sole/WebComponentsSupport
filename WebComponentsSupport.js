@@ -8,11 +8,18 @@
 	}
 
 	// shadowDom -> createShadowRoot
+	var dummyDiv = document.createElement('div');
+	var shadowRootAvailable = !!dummyDiv.createShadowRoot;
+	var shadowRootNative = false;
+	if(shadowRootAvailable) {
+		shadowRootNative = isNativeCode(dummyDiv.createShadowRoot);
+	}
+
 	// html imports
 	// html templates
 
 	function isNativeCode(fun) {
-		var src = fun.toSource();
+		var src = fun.toString();
 		var pos = src.search(/\[native code\]/);
 		return (pos !== -1);
 	}
@@ -29,7 +36,8 @@
 	}
 
 	var WebComponentsSupport = {
-		customElements: makeSupportObject(regElemAvailable, regElemNative)
+		customElements: makeSupportObject(regElemAvailable, regElemNative),
+		shadowDOM: makeSupportObject(shadowRootAvailable, shadowRootNative)
 	};
 
 	// Make it compatible for require.js/AMD loader(s)
