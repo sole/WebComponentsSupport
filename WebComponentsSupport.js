@@ -17,6 +17,8 @@
 
 	// html imports
 	// html templates
+	var dummyTemplate = document.createElement('template');
+	var templatesAvailable = !!(dummyTemplate.content);
 
 	function isNativeCode(fun) {
 		var src = fun.toString();
@@ -37,7 +39,10 @@
 
 	var WebComponentsSupport = {
 		customElements: makeSupportObject(regElemAvailable, regElemNative),
-		shadowDOM: makeSupportObject(shadowRootAvailable, shadowRootNative)
+		shadowDOM: makeSupportObject(shadowRootAvailable, shadowRootNative),
+		// assuming if templates are available, support is nativ
+		// - not sure how to test this as I can't access a browser without template support
+		templates: makeSupportObject(templatesAvailable, templatesAvailable)
 	};
 
 	// Make it compatible for require.js/AMD loader(s)
