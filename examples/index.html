@@ -7,10 +7,12 @@
 	</head>
 	<body>
 		<script>
-			var out = JSON.stringify(WebComponentsSupport, null, 2);
-			var div = document.createElement('div');
-			div.innerHTML = '<pre>' + out + '</pre>';
-			document.body.appendChild(div);
+			WebComponentsSupport(function(results) {
+				var out = JSON.stringify(results, null, 2);
+				var div = document.createElement('div');
+				div.innerHTML = '<pre>' + out + '</pre>';
+				document.body.appendChild(div);
+			});
 		</script>
 	</body>
 </html>
