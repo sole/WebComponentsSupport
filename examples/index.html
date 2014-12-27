@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>basic testing web components support</title>
+		<script src="../WebComponentsSupport.js"></script>
+	</head>
+	<body>
+		<script>
+			var out = JSON.stringify(WebComponentsSupport, null, 2);
+			var div = document.createElement('div');
+			div.innerHTML = '<pre>' + out + '</pre>';
+			document.body.appendChild(div);
+		</script>
+	</body>
+</html>
