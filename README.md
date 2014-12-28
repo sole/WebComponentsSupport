@@ -57,6 +57,6 @@ or this in a browser which doesn't support web components:
 
 It's early times for this code. Look at the [issues](https://github.com/sole/WebComponentsSupport/issues) to figure out what is missing.
 
-In particular, HTML imports detection for Firefox might not be really reliable. I also need to see how things look like when using polyfills such as [webcomponents.js](https://github.com/WebComponents/webcomponentsjs).
+In particular, HTML imports detection for Firefox might not be really reliable.
 
 Help appreciated!
