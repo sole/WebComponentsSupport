@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>testing web components with polyfill support</title>
+		<script src="libs/webcomponents.js"></script>
+		<script src="../WebComponentsSupport.js"></script>
+	</head>
+	<body>
+		<script>
+			WebComponentsSupport(function(results) {
+				var out = JSON.stringify(results, null, 2);
+				var div = document.createElement('div');
+				div.innerHTML = '<pre>' + out + '</pre>';
+				document.body.appendChild(div);
+			});
+		</script>
+	</body>
+</html>
