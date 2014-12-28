@@ -3,7 +3,7 @@
 Runs some tests to evaluate the level of support for web components in your browsers.
 
 ```javascript
-WebComponentsSupport(function(results) {
+WebComponentsSupport(window, function(results) {
 	// results will hold an object with four keys
 	// output it to the console:
 	console.log(JSON.stringify(results, null, 2));
